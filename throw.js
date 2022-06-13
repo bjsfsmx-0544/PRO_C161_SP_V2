@@ -23,11 +23,11 @@ AFRAME.registerComponent("bowling-balls", {
 
         var camera = document.querySelector("#camera").object3D;
 
-        //get the camera direction as Three.js Vector
+        // Obtener la dirección de la cámara como un vector de Three.js
         var direction = new THREE.Vector3();
         camera.getWorldDirection(direction);
 
-        //set the velocity and it's direction
+        // Establecer la velocidad y su dirección
         ball.setAttribute("velocity", direction.multiplyScalar(-10));
 
         var scene = document.querySelector("#scene");
